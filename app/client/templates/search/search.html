@@ -1,0 +1,33 @@
+<template name="search">
+    {{> esInput index="programmes" placeholder="Search Programmes..." }}
+
+    <ul>
+        {{#esEach index="programmes"}}
+<!--             <li>Programme Title: {{complete_title}}</li> -->
+      
+      <tr>
+        <td>{{complete_title}}</td>
+           {{#linkTo route='showProgramme'}}
+            <i class="fa fa-info fa-3x"></i>
+          {{/linkTo}}
+      </tr>
+        {{/esEach}}
+    </ul>
+    
+    {{> esPagination index="programmes"}}
+  
+    {{#ifEsHasNoResults index="programmes"}}
+      <div class="no-results">No results found!</div>
+    {{/ifEsHasNoResults}}
+  
+    {{#ifEsIsSearching index="programmes"}}
+      <div>Searching...</div>  
+    {{/ifEsIsSearching}}
+  
+  
+  <br>
+  <br>
+  <br>
+  <br>
+  
+</template>

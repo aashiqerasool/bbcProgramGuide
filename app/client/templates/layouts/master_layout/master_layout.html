@@ -13,11 +13,9 @@
       <div class="collapse navbar-collapse" id="navigationbar">
         <ul class="nav navbar-nav navbar-right">
           <li>{{#linkTo route="home"}}<i class="fa fa-home"></i>   Home{{/linkTo}}</li>
-<!--           {{#if currentUser}} -->
-            <li>{{#linkTo route="tagList"}}<i class="fa fa-align-justify"></i> Tags{{/linkTo}}</li>
-<!--             <li>{{#linkTo route="insertIssue"}}<i class="fa fa-plus"></i> New Issue{{/linkTo}}</li> -->
-<!--           {{/if}} -->
-          <li><div class="nav navbar-nav navbar-right"> {{> loginButtons}}</div></li>
+          <li>{{#linkTo route="tagList"}}<i class="fa fa-align-justify"></i> Tags{{/linkTo}}</li>
+          <li>{{#linkTo route="programmeList"}}<i class="fa fa-play-circle-o"></i> Programmes{{/linkTo}}</li>
+<!--           <li><div class="nav navbar-nav navbar-right"> {{> loginButtons}}</div></li> -->
         </ul>
       </div>
     </div>

@@ -16,3 +16,7 @@ Meteor.publish('programmes', function (/* args */) {
 Meteor.publish('service', function (/* args */) {
   return Service.find();
 });
+
+Meteor.publish('categories', function (/* args */) {
+  return Categories.find();
+});

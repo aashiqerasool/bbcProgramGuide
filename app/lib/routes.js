@@ -39,3 +39,24 @@ Router.route('/programmes/:_id', {
   action: 'show',
   where: 'client'
 });
+
+Router.route('search', {
+  name: 'search',
+  controller: 'SearchController',
+  action: 'action',
+  where: 'client'
+});
+
+Router.route('/search/id', {
+  name: 'searchId',
+  controller: 'IdController',
+  action: 'action',
+  where: 'client'
+});
+
+Router.route('/search/:_id', {
+  name: 'search:Id',
+  controller: ':IdController',
+  action: 'action',
+  where: 'client'
+});
