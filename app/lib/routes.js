@@ -60,3 +60,17 @@ Router.route('/search/:_id', {
   action: 'action',
   where: 'client'
 });
+
+Router.route('categories', {
+  name: 'categories',
+  controller: 'CategoriesController',
+  action: 'action',
+  where: 'client'
+});
+
+Router.route('/categories/:_id', {
+  name: 'categories:Id',
+  controller: 'CategoriesController',
+  action: 'list',
+  where: 'client'
+});

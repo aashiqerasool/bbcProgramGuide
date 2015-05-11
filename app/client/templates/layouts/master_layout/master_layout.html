@@ -13,13 +13,198 @@
       <div class="collapse navbar-collapse" id="navigationbar">
         <ul class="nav navbar-nav navbar-right">
           <li>{{#linkTo route="home"}}<i class="fa fa-home"></i>   Home{{/linkTo}}</li>
-          <li>{{#linkTo route="tagList"}}<i class="fa fa-align-justify"></i> Tags{{/linkTo}}</li>
-          <li>{{#linkTo route="programmeList"}}<i class="fa fa-play-circle-o"></i> Programmes{{/linkTo}}</li>
+<!--           <li>{{#linkTo route="tagList"}}<i class="fa fa-align-justify"></i> Tags{{/linkTo}}</li> -->
+          <li>{{#linkTo route="programmeList"}}<i class="fa fa-play-circle-o"></i> All Programmes{{/linkTo}}</li>
+          <li>{{#linkTo route="search"}}<i class="fa fa-search"></i> Search{{/linkTo}}</li>
 <!--           <li><div class="nav navbar-nav navbar-right"> {{> loginButtons}}</div></li> -->
         </ul>
       </div>
     </div>
   </nav>
+  <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Categories</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+<!--               <li><a href="/categories/9100001">Childrens</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Childrens<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000012">Activities</a></li>
+                  <li><a href="/categories/92000022">Entertainment and Comedy</a></li>
+                  <li><a href="/categories/92000032">Drama</a></li>
+                  <li><a href="/categories/92000042">Factual</a></li>
+                  <li><a href="/categories/92000062">News</a></li>
+                  <li><a href="/categories/92000072">Sport</a></li>
+                  <li><a href="/categories/92009992">Animation</a></li>
+                </ul>
+              </li>
+<!--               <li><a href="/categories/91000041">Learning</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learning<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000042">Factual</a></li>
+                  <li><a href="/categories/92000372">Pre-School</a></li>
+                  <li><a href="/categories/92000382">Primary</a></li>
+                  <li><a href="/categories/92000392">Secondary</a></li>
+                  <li><a href="/categories/92000402">Adult</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100054">LifeStyle and Leisure</a></li> -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Lifestyle and Leisure<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000422">Pets and Animals</a></li>
+                  <li><a href="/categories/92000432">Antiques</a></li>
+                  <li><a href="/categories/92000522">Food and Drink</a></li>
+                  <li><a href="/categories/92000542">Health and Wellbeing</a></li>
+                  <li><a href="/categories/92000562">Homes and Gardens</a></li>
+                  <li><a href="/categories/92000602">Travel</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100007">News</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/97000071" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">News<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000061">Music</a></li>
+                  <li><a href="/categories/92000101">Sport</a></li>
+                  <li><a href="/categories/92000412">Arts, Culture and the Media</a></li>
+                  <li><a href="/categories/92000582"></a>Politics</li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100003">Drama</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/92000031" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Drama<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000152">Action and Adventure</a></li>
+                  <li><a href="/categories/92000162">Biographical</a></li>
+                  <li><a href="/categories/92000172">Classic and Period</a></li>
+                  <li><a href="/categories/92000182">Crime</a></li>
+                  <li><a href="/categories/92000212">Historical</a></li>
+                  <li><a href="/categories/92000222">Horror and Supernatural</a></li>
+                  <li><a href="/categories/92009232">Legal and Courtroom</a></li>
+                  <li><a href="/categories/92000252">Medical</a></li>
+                  <li><a href="/categories/92000282">Political</a></li>
+                  <li><a href="/categories/92000292">Psychological</a></li>
+                  <li><a href="/categories/92000312">Relationships and Romance</a></li>
+                  <li><a href="/categories/92000322">SciFi and Fantasy</a></li>
+                  <li><a href="/categories/92000332">Soaps</a></li>
+                  <li><a href="/categories/92000342">Thriller</a></li>
+                  <li><a href="/categories/92000352">War and Disaster</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100005">Documentaries</a></li> -->
+                            <li class="dropdown">
+                <a href="/categories/95000051" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Documentaries<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000081">Religion and Ethics</a></li>
+                  <li><a href="/categories/92000412">Arts, Culture and the Media</a></li>
+                  <li><a href="/categories/92000452">Life Stories</a></li>
+                  <li><a href="/categories/92000462">Money</a></li>
+                  <li><a href="/categories/92000472">Cars and Motors</a></li>
+                  <li><a href="/categories/92000492">Consumer</a></li>
+                  <li><a href="/categories/92000512">Families and Relationships</a></li>
+                  <li><a href="/categories/92009542">Health and Wellbeing</a></li>
+                  <li><a href="/categories/92000552">History</a></li>
+                  <li><a href="/categories/92000572">Crime and Justice</a></li>
+                  <li><a href="/categories/92000582">Politics</a></li>
+                  <li><a href="/categories/92000592">Science and Nature</a></li>
+                  <li><a href="/categories/92001152">Disability</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100006">Music</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/91000061" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Music<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000622">Classic Pop and Rock</a></li>
+                  <li><a href="/categories/92000632">Classical</a></li>
+                  <li><a href="/categories/92000642">Dance and Electronica</a></li>
+                  <li><a href="/categories/92000652">Easy Listening Soundtracks and Musicals</a></li>
+                  <li><a href="/categories/92000692">Pop and Chart</a></li>
+                  <li><a href="/categories/92000702">Rock and Indie</a></li>
+                  <li><a href="/categories/92000712">Hip Hop, RnB and Dancehall</a></li>
+                  <li><a href="/categories/92000722">World</a></li>
+                  <li><a href="/categories/92001102">Country</a></li>
+                  <li><a href="/categories/92001112">Desi</a></li>
+                  <li><a href="/categories/92001122">Folk</a></li>
+                  <li><a href="/categories/92001132">Jazz and Blues</a></li>
+                  <li><a href="/categories/92001142">Soul and Reggae</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100054">Sport</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/91000101" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sport<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000732">Football</a></li>
+                  <li><a href="/categories/92000742">Cricket</a></li>
+                  <li><a href="/categories/92000752">Rugby Union</a></li>
+                  <li><a href="/categories/92000762">Rugby League</a></li>
+                  <li><a href="/categories/92000772">Tennis</a></li>
+                  <li><a href="/categories/92000782">Golf</a></li>
+                  <li><a href="/categories/92000792">Motorsport</a></li>
+                  <li><a href="/categories/92000802">Boxing</a></li>
+                  <li><a href="/categories/92000812">Athletics</a></li>
+                  <li><a href="/categories/92000832">Horse Racing</a></li>
+                  <li><a href="/categories/92000922">Rowing</a></li>
+                  <li><a href="/categories/92001002">Disabilities</a></li>
+                  <li><a href="/categories/92001012">Gaelic Games</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100093">Films</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/91000931" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Films<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000152">Action and Adventure</a></li>
+                  <li><a href="/categories/92000262">Musical</a></li>
+                  <li><a href="/categories/92000312">Relationships and Romance</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100098">Comedy</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/91000981" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Comedy<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000082">Impressionists</a></li>
+                  <li><a href="/categories/92000092">Satire</a></li>
+                  <li><a href="/categories/92000102">Sitcoms</a></li>
+                  <li><a href="/categories/92000112">Sketch</a></li>
+                  <li><a href="/categories/92000122">Spoof</a></li>
+                  <li><a href="/categories/92000132">Standup</a></li>
+                  <li><a href="/categories/92001292">Character</a></li>
+                  <li><a href="/categories/92009962">Games and Quizzes</a></li>
+                </ul>
+                </li>
+<!--               <li><a href="/categories/9100099">Entertainment</a></li> -->
+              <li class="dropdown">
+                <a href="/categories/91000991" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Entertainment<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/categories/92000132">Standup</a></li>
+                  <li><a href="/categories/92000142">Variety Shows</a></li>
+                  <li><a href="/categories/92000912">Talent Shows</a></li>
+                  <li><a href="/categories/92009922">Reality</a></li>
+                  <li><a href="/categories/92009932">Phone-ins</a></li>
+                  <li><a href="/categories/92009942">Makeovers</a></li>
+                  <li><a href="/categories/92009952">Review Shows</a></li>
+                  <li><a href="/categories/92009962">Games and Quizzes</a></li>
+                  <li><a href="/categories/92009972">Discussion and Talk Shows</a></li>
+                </ul>
+                </li>
+<!--             <ul class="nav navbar-nav navbar-right"> -->
+<!--               <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li> -->
+<!--               <li><a href="../navbar-static-top/">Static top</a></li> -->
+<!--               <li><a href="../navbar-fixed-top/">Fixed top</a></li> -->
+              
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
   <div class="container">
     {{> yield}}
   </div>

@@ -18,19 +18,45 @@ h1 {
       <tr>
         <th>From</th>
         <th>To</th>
-<!--         <th>Due Date</th>
-        <th>Priority</th>
-        <th></th> -->
+
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{epoch_start}}</td>
-        <td>{{epoch_end}}</td>
+        <td>{{moFormat epoch_start 'DD/MM/YYYY'}}</td>
+        <td>{{moFormat epoch_end 'DD/MM/YYYY'}}</td>
       </tr>
     </tbody>
   </table>
-    <h2>Service</h2>
-    <p>{{serviceDisplay}}</p>
+    
+    <table class="table table-hover">
+          <thead>
+      <tr>
+        <th><h2>Service</h2></th>
+        <th><h2>Type</h2></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>{{serviceDisplay}}</p></td>
+        <td>{{{mediaType}}}</td>
+<!--         {{#if mediaType=audio}} -->
+<!--         <td><i class="fa fa-volume-up fa-3x"></i></td> -->
+<!--         {{/if}} -->
+<!--         {{#if mediaType=video}} -->
+<!--         <td><i class="fa fa-film fa-3x"></i></td> -->
+<!--         {{/if}} -->
+      </tr>
+    </tbody>
+  </table>
+  {{#if isClip}}
+    <p>This is a clip</p>
+  {{/if}}  
+<!--     <h2>Tags</h2>
+    <p>{{tagsDisplay}}</p>
+    {{#each tagsDisplay}}
+    <li>{{this}}</li>
+    {{/each}} -->
   </div>
 </template>

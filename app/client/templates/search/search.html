@@ -1,4 +1,8 @@
 <template name="search">
+  
+  <h1>Search Programmes</h1>
+  <p>To search programmes by name simply begin typing in the text field below and results will populate the page as you type</p>
+  <br>
     {{> esInput index="programmes" placeholder="Search Programmes..." }}
 
     <ul>
@@ -7,9 +11,11 @@
       
       <tr>
         <td>{{complete_title}}</td>
-           {{#linkTo route='showProgramme'}}
+<!--            {{#linkTo route='showProgramme'}} -->
+        <a href="/programmes/{{_id}}">
             <i class="fa fa-info fa-3x"></i>
-          {{/linkTo}}
+        </a>
+<!--           {{/linkTo}} -->
       </tr>
         {{/esEach}}
     </ul>

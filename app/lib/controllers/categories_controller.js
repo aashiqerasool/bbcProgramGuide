@@ -1,4 +1,4 @@
-ProgrammesController = RouteController.extend({
+CategoriesController = RouteController.extend({
   subscriptions: function () {
     // set up the subscriptions for the route and optionally
     // wait on them like this:
@@ -9,7 +9,6 @@ ProgrammesController = RouteController.extend({
     // the subscription handle is added to a reactive list
     // and when all items in this list are ready, this.ready()
     // returns true in any of your route functions.
-    
     this.subscribe('programmes');
     this.subscribe('service');
     this.subscribe('categories');
@@ -18,7 +17,7 @@ ProgrammesController = RouteController.extend({
   data: function () {
     // return a global data context like this:
     // Items.findOne({_id: this.params._id});
-    return Programmes.findOne({_id: this.params._id})
+     return Categories.findOne({_id: this.params._id})
   },
 
   action: function () {
@@ -28,12 +27,16 @@ ProgrammesController = RouteController.extend({
     // might also perform some conditional logic. Override
     // the data context by providing it as an option in the
     // last parameter.
-    this.render('Programmes', { /* data: {} */});
+    this.render('Categories', { /* data: {} */});
   },
   list: function() {
-    this.render('ProgrammeList', {})
+    this.render('CategoryShow', {
+      data: function () {
+//       return Programmes.findOne({categories: this.params._id});
+    }
+    })
   },
   show: function() {
-    this.render('ShowProgramme', {})
-  }  
+    this.render('CategoryShow', {})
+  } 
 });
