@@ -16,7 +16,13 @@ Template.CategoryShow.events({
     incrementLimit();
   },
   'click .only-clips': function(evt) {
-    Session.set("onlyClips", true);
+    Session.set("onlyClips", !Session.get("onlyClips"));
+    if(Session.get("onlyClips") === true) {
+      $(evt.target).text("Show All");
+    }
+    else if(Session.get("onlyClips") === false) {
+      $(evt.target).text("Show Only Clips");
+    }
   }  
 });
 
