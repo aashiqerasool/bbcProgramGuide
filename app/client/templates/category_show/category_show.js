@@ -1,3 +1,7 @@
+Template.registerHelper('equals', function (a, b) {
+  return a === b;
+});
+
 /*****************************************************************************/
 /* CategoryShow: Event Handlers */
 /*****************************************************************************/
@@ -19,6 +23,13 @@ Template.CategoryShow.helpers({
     console.log(param);
     var search = new RegExp(param, 'i');
     return Programmes.find({categories: search});
+  },
+  isClip: function() {
+    if (this.is_clip ===1) {
+      return true;
+    }
+    else
+      return false;
   }
 });
 

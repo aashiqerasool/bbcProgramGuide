@@ -8,16 +8,32 @@
 <!--         <th>Description</th>
         <th>Due Date</th>
         <th>Priority</th> -->
-        <th></th>
+        <th>Type</th>
+        <th>More Info</th>
       </tr>
     </thead>
     <tbody>
     {{#each programmesShow}}
       <tr>
         <td>{{complete_title}}</td>
-           {{#linkTo route='showProgramme'}}
-            <i class="fa fa-info fa-3x"></i>
+        <td>
+          {{#if equals media_type "audio"}}
+          <i class="fa fa-volume-up fa-3x"></i>
+          {{/if}}
+          {{#if equals media_type "video"}}
+          <i class="fa fa-film fa-2x"></i>
+          {{/if}}
+        </td>
+        <td>{{#linkTo route='showProgramme'}}
+            <i class="fa fa-info fa-2x"></i>
           {{/linkTo}}
+        </td>
+        <td>
+          {{#if equals is_clip 1}}
+            <i class="fa fa-paperclip fa-1x"></i>
+          {{/if}}
+        </td>
+
 <!--         <td>{{description}}</td> -->
 <!--         <td>{{dueDateFormatted}}</td> -->
 <!--         <td>
@@ -38,6 +54,9 @@
         </td> -->
       </tr>
     {{/each}}
+      <br>
+      <br>
+      <br>
     </tbody>
   </table>
   </div>

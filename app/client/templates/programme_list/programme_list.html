@@ -1,6 +1,7 @@
 <template name="ProgrammeList">
   <div class="container">
   <h1>Programme List</h1>
+<!--   {{> programmes}} -->
   <table class="table table-hover">
     <thead>
       <tr>
@@ -15,9 +16,23 @@
     {{#each programmes}}
       <tr>
         <td>{{complete_title}}</td>
-           {{#linkTo route='showProgramme'}}
-            <i class="fa fa-info fa-3x"></i>
+        <td>
+          {{#if equals media_type "audio"}}
+          <i class="fa fa-volume-up fa-3x"></i>
+          {{/if}}
+          {{#if equals media_type "video"}}
+          <i class="fa fa-film fa-2x"></i>
+          {{/if}}
+        </td>
+        <td>{{#linkTo route='showProgramme'}}
+            <i class="fa fa-info fa-2x"></i>
           {{/linkTo}}
+        </td>
+        <td>
+          {{#if equals is_clip 1}}
+            <i class="fa fa-paperclip fa-1x"></i>
+          {{/if}}
+        </td>
 <!--         <td>{{description}}</td> -->
 <!--         <td>{{dueDateFormatted}}</td> -->
 <!--         <td>
@@ -41,4 +56,9 @@
     </tbody>
   </table>
   </div>
+</template>
+
+<template name="programmes">
+  {{> pagesNav}}
+  {{> pages}}
 </template>
