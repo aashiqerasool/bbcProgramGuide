@@ -1,0 +1,65 @@
+<template name="ServiceShow">
+<div class="container">
+  <h1>{{categoryDisplayAs}}({{programmeCount}})</h1>
+  <button class="only-clips">Show Only Clips</button>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+<!--         <th>Description</th>
+        <th>Due Date</th>
+        <th>Priority</th> -->
+        <th>Type</th>
+        <th>More Info</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each programmesShow}}
+      <tr>
+        <td>{{complete_title}}</td>
+        <td>
+          {{#if equals media_type "audio"}}
+          <i class="fa fa-volume-up fa-3x"></i>
+          {{/if}}
+          {{#if equals media_type "video"}}
+          <i class="fa fa-film fa-2x"></i>
+          {{/if}}
+        </td>
+        <td>{{#linkTo route='showProgramme'}}
+            <i class="fa fa-info fa-2x"></i>
+          {{/linkTo}}
+        </td>
+        <td>
+          {{#if equals is_clip 1}}
+            <i class="fa fa-paperclip fa-1x"></i>
+          {{/if}}
+        </td>
+
+<!--         <td>{{description}}</td> -->
+<!--         <td>{{dueDateFormatted}}</td> -->
+<!--         <td>
+          {{#if priorityHigh}}
+            <span class="label label-danger">{{priority}}</span>
+          {{/if}}
+          {{#if priorityMedium}}
+            <span class="label label-warning">{{priority}}</span>
+          {{/if}}
+          {{#if priorityLow}}
+            <span class="label label-success">{{priority}}</span>
+          {{/if}}
+        </td> -->
+<!--         <td>
+          {{#linkTo route=’editIssue’}}
+            <i class="fa fa-pencil-square-o"></i>
+          {{/linkTo}}
+        </td> -->
+      </tr>
+    {{/each}}
+      <button class="more-programmes">More Programmes</button>
+      <br>
+      <br>
+      <br>
+    </tbody>
+  </table>
+  </div>
+</template>

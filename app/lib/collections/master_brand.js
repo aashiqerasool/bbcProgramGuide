@@ -1,4 +1,4 @@
-MasterBrand = new Mongo.Collection('master_brand');
+MasterBrand = new Mongo.Collection('masterbrand');
 
 
 if (Meteor.isServer) {

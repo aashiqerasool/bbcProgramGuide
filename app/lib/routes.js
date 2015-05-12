@@ -74,3 +74,17 @@ Router.route('/categories/:_id', {
   action: 'list',
   where: 'client'
 });
+
+Router.route('services', {
+  name: 'services',
+  controller: 'ServicesController',
+  action: 'action',
+  where: 'client'
+});
+
+Router.route('/services/:_id', {
+  name: 'services:Id',
+  controller: 'ServicesController',
+  action: 'list',
+  where: 'client'
+});

@@ -1,3 +1,7 @@
+Template.registerHelper('equals', function (a, b) {
+  return a === b;
+});
+
 /*****************************************************************************/
 /* ShowProgramme: Event Handlers */
 /*****************************************************************************/
@@ -10,6 +14,10 @@ Template.ShowProgramme.events({
 Template.ShowProgramme.helpers({
   serviceDisplay: function() {
     return Service.findOne({_id: this.service}).display_as;
+  },
+  masterBrandDisplay: function() {
+    console.log(MasterBrand.findOne({_id: this.masterbrand}).display_as);
+    return MasterBrand.findOne({_id: this.masterbrand}).display_as;
   },
   tagsDisplay: function() {
    return this.tags;

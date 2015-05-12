@@ -33,13 +33,18 @@ h1 {
           <thead>
       <tr>
         <th><h2>Service</h2></th>
+        <th><h2>Master Brand</h2></th>
         <th><h2>Type</h2></th>
 
       </tr>
     </thead>
     <tbody>
       <tr>
+<!--         {{#if equals serviceDisplay null}} -->
         <td><p>{{serviceDisplay}}</p></td>
+<!--         {{else}} -->
+        <td><p>{{masterBrandDisplay}}</p></td>
+<!--         {{/if}} -->
         <td>{{{mediaType}}}</td>
 <!--         {{#if mediaType=audio}} -->
 <!--         <td><i class="fa fa-volume-up fa-3x"></i></td> -->
