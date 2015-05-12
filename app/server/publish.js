@@ -9,8 +9,17 @@ Meteor.publish('tags', function (/* args */) {
   return Tags.find();
 });
 
-Meteor.publish('programmes', function (/* args */) {
-  return Programmes.find();
+Meteor.publish('programmes', function (limit) {
+  if (limit > Programmes.find().count()) {
+    limit = 0;
+  }
+  
+  return Programmes.find({ }, { limit: limit});
+});
+
+FilterCollections.publish(Programmes, {
+  name: 'programmesFilter',
+  callbacks: {/*...*/}
 });
 
 Meteor.publish('service', function (/* args */) {

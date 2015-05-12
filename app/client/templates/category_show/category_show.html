@@ -1,6 +1,7 @@
 <template name="CategoryShow">
 <div class="container">
-  <h1>{{categoryDisplayAs}}</h1>
+  <h1>{{categoryDisplayAs}}({{programmeCount}})</h1>
+  <button class="only-clips">Show Only Clips</button>
   <table class="table table-hover">
     <thead>
       <tr>
@@ -54,6 +55,7 @@
         </td> -->
       </tr>
     {{/each}}
+      <button class="more-programmes">More Programmes</button>
       <br>
       <br>
       <br>
