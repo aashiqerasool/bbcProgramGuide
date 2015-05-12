@@ -23,7 +23,10 @@ Template.CategoryShow.events({
     else if(Session.get("onlyClips") === false) {
       $(evt.target).text("Show Only Clips");
     }
-  }  
+  },
+  "change .audio-only": function (evt) {
+    Session.set("audioOnly", evt.target.checked);
+  }
 });
 
 /*****************************************************************************/
@@ -45,6 +48,16 @@ Template.CategoryShow.helpers({
     var param = Router.current().params._id;
     console.log(param);
     var search = new RegExp(param, 'i');
+    var audioOnly;
+    if (Session.get("audioOnly" === false)){
+      audioOnly = null;
+    } else if (Session.get("audioOnly") === true) {
+      audioOnly = audio
+    }
+//     else audioOnly = null;
+//     if(Session.get("audioOnly")) {
+//       return Programmes.find({categories: search, media_type: audioOnly}, { limit: Session.get('limit') });
+//     }
     if(Session.get("onlyClips")) {
       return Programmes.find({categories: search, is_clip: 1}, { limit: Session.get('limit') });
     }
@@ -63,6 +76,9 @@ Template.CategoryShow.helpers({
 //     console.log(param);
     var search = new RegExp(param, 'i');
     return Programmes.find({categories: search}).count();
+  },
+  audioOnly: function () {
+    return Session.get("audioOnly");
   }
 });
 
@@ -72,6 +88,7 @@ Template.CategoryShow.helpers({
 Template.CategoryShow.created = function () {
   Session.setDefault('limit', 10);
   Session.setDefault('onlyClips', false);
+  Session.setDefault('audioOnly', false);
 
   // Tracker.autorun() automatically rerun the subscription whenever Session.get('limit') changes
   // http://docs.meteor.com/#deps_autorun
