@@ -2,6 +2,9 @@
 <div class="container">
   <h1>{{categoryDisplayAs}}({{programmeCount}})</h1>
   <button class="only-clips">Show Only Clips</button>
+<!--   <a href="#" class="fc-filter" data-fc-filter-field="media_type" data-fc-filter-value="audio" >
+    Show audio only
+  </a> -->
 <!--   <label for="audi-only">Audio</label> -->
 <!--   <input type="checkbox" name="audio-only" class="audio-only" id="audio-only" checked={{audioOnly}}><br> -->
   <table class="table table-hover">
@@ -16,6 +19,7 @@
       </tr>
     </thead>
     <tbody>
+<!--     {{#each fcResults}}   -->
     {{#each programmesShow}}
       <tr>
         <td>{{complete_title}}</td>

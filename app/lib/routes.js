@@ -75,16 +75,26 @@ Router.route('/categories/:_id', {
   where: 'client'
 });
 
-Router.route('services', {
-  name: 'services',
+Router.route('channels', {
+  name: 'channels',
   controller: 'ServicesController',
-  action: 'action',
+  action: 'show',
   where: 'client'
 });
 
-Router.route('/services/:_id', {
-  name: 'services:Id',
+Router.route('/channels/:_id', {
+  name: 'channels:Id',
   controller: 'ServicesController',
   action: 'list',
   where: 'client'
 });
+// Router.onBeforeAction(function () {
+//   // all properties available in the route function
+//   // are also available here such as this.params
+
+//   // make sure to scroll to the top of the page on a new route
+//     // Use: global
+  
+//         $('body,html').scrollTop(0);
+    
+// });

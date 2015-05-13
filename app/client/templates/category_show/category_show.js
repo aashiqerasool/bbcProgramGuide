@@ -1,3 +1,32 @@
+// ProgrammesFilter = new FilterCollections(Programmes, {
+//   //...
+//   template:"CategoryShow",
+//   name: "programmesFilter",
+//   filters: {
+// //     name: {
+// //       title: 'Audio',
+// // //       operator: ['$regex', 'i'],
+// //       condition: '$and',
+// //       searchable: true
+// //     },
+// //     account_balance: {
+// //       title: 'Person Account Balance',
+// //       condition: '$and',
+// //       transform: function (value) {
+// //         return parseFloat(value);
+// //       },
+// //       sort: 'desc'
+// //     },
+//     media_type: {
+//       title: 'Media Type'
+//     },
+// //     "contacts.name": {
+// //       title: 'ContactName'
+// //     }
+//   },
+//   //...
+// });
+
 Template.registerHelper('equals', function (a, b) {
   return a === b;
 });
@@ -98,6 +127,7 @@ Template.CategoryShow.created = function () {
 };
 
 Template.CategoryShow.rendered = function () {
+  Session.setDefault('onlyClips', false);
 //   $(window).scroll(function() {
 //     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
 //       incrementLimit();
@@ -106,4 +136,5 @@ Template.CategoryShow.rendered = function () {
 };
 
 Template.CategoryShow.destroyed = function () {
+  Session.set('onlyClips', false);
 };

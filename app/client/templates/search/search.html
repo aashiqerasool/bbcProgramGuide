@@ -1,34 +1,85 @@
 <template name="search">
-  
+  <div class="container">
   <h1>Search Programmes</h1>
   <p>To search programmes by name simply begin typing in the text field below and results will populate the page as you type</p>
   <br>
     {{> esInput index="programmes" placeholder="Search Programmes..." }}
-
-    <ul>
-        {{#esEach index="programmes"}}
-<!--             <li>Programme Title: {{complete_title}}</li> -->
-      
+<!--   <button class="only-clips">Show Only Clips</button> -->
+<!--   <a href="#" class="fc-filter" data-fc-filter-field="media_type" data-fc-filter-value="audio" >
+    Show audio only
+  </a> -->
+<!--   <label for="audi-only">Audio</label> -->
+<!--   <input type="checkbox" name="audio-only" class="audio-only" id="audio-only" checked={{audioOnly}}><br> -->
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+<!--         <th>Description</th>
+        <th>Due Date</th>
+        <th>Priority</th> -->
+        <th>Type</th>
+        <th>More Info</th>
+      </tr>
+    </thead>
+    <tbody>
+<!--     {{#each fcResults}}   -->
+    {{#esEach index="programmes"}}
       <tr>
         <td>{{complete_title}}</td>
-<!--            {{#linkTo route='showProgramme'}} -->
-        <a href="/programmes/{{_id}}">
-            <i class="fa fa-info fa-3x"></i>
-        </a>
-<!--           {{/linkTo}} -->
+        <td>
+          {{#if equals media_type "audio"}}
+          <i class="fa fa-volume-up fa-3x"></i>
+          {{/if}}
+          {{#if equals media_type "video"}}
+          <i class="fa fa-film fa-2x"></i>
+          {{/if}}
+        </td>
+        <td>{{#linkTo route='showProgramme'}}
+            <i class="fa fa-info fa-2x"></i>
+          {{/linkTo}}
+        </td>
+        <td>
+          {{#if equals is_clip 1}}
+            <i class="fa fa-paperclip fa-1x"></i>
+          {{/if}}
+        </td>
+
+<!--         <td>{{description}}</td> -->
+<!--         <td>{{dueDateFormatted}}</td> -->
+<!--         <td>
+          {{#if priorityHigh}}
+            <span class="label label-danger">{{priority}}</span>
+          {{/if}}
+          {{#if priorityMedium}}
+            <span class="label label-warning">{{priority}}</span>
+          {{/if}}
+          {{#if priorityLow}}
+            <span class="label label-success">{{priority}}</span>
+          {{/if}}
+        </td> -->
+<!--         <td>
+          {{#linkTo route=’editIssue’}}
+            <i class="fa fa-pencil-square-o"></i>
+          {{/linkTo}}
+        </td> -->
       </tr>
-        {{/esEach}}
-    </ul>
-    
+    {{/esEach}}
+<!--       <button class="more-programmes">More Programmes</button> -->
+      <br>
+      <br>
+      <br>
+    </tbody>
+  </table>
     {{> esPagination index="programmes"}}
-  
+
     {{#ifEsHasNoResults index="programmes"}}
-      <div class="no-results">No results found!</div>
+    <div class="no-results">No results found!</div>
     {{/ifEsHasNoResults}}
-  
+
     {{#ifEsIsSearching index="programmes"}}
-      <div>Searching...</div>  
+    <div>Searching...</div>  
     {{/ifEsIsSearching}}
+  </div>
   
   
   <br>

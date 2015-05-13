@@ -17,10 +17,10 @@ Meteor.publish('programmes', function (limit) {
   return Programmes.find({ }, { limit: limit});
 });
 
-FilterCollections.publish(Programmes, {
-  name: 'programmesFilter',
-  callbacks: {/*...*/}
-});
+// FilterCollections.publish(Programmes, {
+//   name: 'programmesFilter'
+// //   callbacks: {/*...*/}
+// });
 
 Meteor.publish('service', function (/* args */) {
   return Service.find();

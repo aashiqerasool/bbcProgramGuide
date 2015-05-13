@@ -6,6 +6,10 @@ Template.registerHelper('equals', function (a, b) {
 /* ShowProgramme: Event Handlers */
 /*****************************************************************************/
 Template.ShowProgramme.events({
+    'click .related-programmes-link': function(evt) {
+//     window.scrollTo(0, 0);
+//       $(document).scrollTop(0);
+  },
 });
 
 /*****************************************************************************/
@@ -38,6 +42,9 @@ Template.ShowProgramme.helpers({
     else if(mediaType=="video") {
       return "<i class=\"fa fa-film fa-3x\"></i>"
     }
+  },
+  relatedProgrammes: function() {
+    return Programmes.find({brand_pid: this.brand_pid}, { limit: 5 });
   }
 });
 
@@ -48,6 +55,7 @@ Template.ShowProgramme.created = function () {
 };
 
 Template.ShowProgramme.rendered = function () {
+//   $(document).scrollTop( $("#top").offset().top );
 };
 
 Template.ShowProgramme.destroyed = function () {

@@ -4,6 +4,7 @@ h1 {
  display:inline;
 }
 </style>
+  <div id="top" class="top" name="top"></div>
   <div class="page-header">
     <h1>Programme Info</h1>
   </div>
@@ -63,5 +64,18 @@ h1 {
     {{#each tagsDisplay}}
     <li>{{this}}</li>
     {{/each}} -->
+  </div>
+  <div class="jumbotron">
+    <div class="page-header">
+      <h2>Related Programes</h2>
+      <p>Click the related link and then scroll to the top of the page for that programmes information</p>
+      {{#each relatedProgrammes}}
+        <div class="panel panel-default">
+        <div class="panel-body">
+          <a href="/programmes/{{_id}}" class="related-programme-link">{{complete_title}}</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
   </div>
 </template>

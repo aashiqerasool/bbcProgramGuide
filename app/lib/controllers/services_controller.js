@@ -12,6 +12,7 @@ ServicesController = RouteController.extend({
     this.subscribe('programmes');
     this.subscribe('service');
     this.subscribe('categories');
+    this.subscribe('masterbrand');
   },
 
   data: function () {
@@ -32,11 +33,11 @@ ServicesController = RouteController.extend({
   list: function() {
     this.render('ServiceShow', {
       data: function () {
-//       return Programmes.findOne({categories: this.params._id});
+      return Programmes.findOne({masterbrand: this.params._id},{sort: {display_as: 1}});
     }
     })
   },
   show: function() {
-    this.render('ServiceShow', {})
+    this.render('Services', {})
   } 
 });

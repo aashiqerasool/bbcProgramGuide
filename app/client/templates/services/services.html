@@ -1,3 +1,7 @@
 <template name="Services">
-  <h1>Find me in app/client/templates/services/services</h1>
+  <h1>Browse by Channel</h1>
+  <p>Select a channel from the list below to see all related programmes.</p>
+  {{#each servicesDisplay}}
+  <p><a href="/channels/{{_id}}"><span class="label label-primary">{{display_as}}</span></a></p>
+  {{/each}}
 </template>

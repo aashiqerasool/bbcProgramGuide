@@ -14,6 +14,7 @@ ProgrammesController = RouteController.extend({
     this.subscribe('service');
     this.subscribe('categories');
     this.subscribe('masterbrand');
+    
   },
 
   data: function () {

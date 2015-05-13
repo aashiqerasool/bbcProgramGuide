@@ -30,21 +30,21 @@ Template.ServiceShow.events({
 /* ServiceShow: Helpers */
 /*****************************************************************************/
 Template.ServiceShow.helpers({
-  categoryDisplayAs: function() {
+  channelDisplayAs: function() {
     var idParam = Router.current().params._id;
     var idRegex = new RegExp(idParam, 'i');
     console.log(idParam);
-    return Service.findOne({_id: idParam}).display_as;
+    return MasterBrand.findOne({_id: idParam}).display_as;
   },
   programmesShow: function() {
     var param = Router.current().params._id;
     console.log(param);
     var search = new RegExp(param, 'i');
     if(Session.get("onlyClips")) {
-      return Programmes.find({service: param, is_clip: 1}, { limit: Session.get('limit') });
+      return Programmes.find({masterbrand: param, is_clip: 1}, { limit: Session.get('limit') });
     }
     else
-      return Programmes.find({service: param}, { limit: Session.get('limit') });
+      return Programmes.find({masterbrand: param}, { limit: Session.get('limit') });
   },
   isClip: function() {
     if (this.is_clip ===1) {

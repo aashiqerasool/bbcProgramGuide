@@ -1,3 +1,5 @@
+Meteor.subscribe("service");
+
 Template.MasterLayout.helpers({
   services: function() {
     return Service.find();

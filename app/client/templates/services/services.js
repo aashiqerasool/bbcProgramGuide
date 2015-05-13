@@ -8,6 +8,9 @@ Template.Services.events({
 /* Services: Helpers */
 /*****************************************************************************/
 Template.Services.helpers({
+    servicesDisplay: function() {
+    return MasterBrand.find();
+  }
 });
 
 /*****************************************************************************/
