@@ -57,7 +57,7 @@ Template.ServiceShow.helpers({
     var param = Router.current().params._id;
 //     console.log(param);
     var search = new RegExp(param, 'i');
-    return Programmes.find({service: search}).count();
+    return Programmes.find({masterbrand: search}).count();
   }
 });
 

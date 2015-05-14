@@ -31,6 +31,23 @@ Template.registerHelper('equals', function (a, b) {
   return a === b;
 });
 
+Template.registerHelper('isDubbedAD', function (a) {
+  var search = new RegExp("dubbedaud", 'i');
+//     console.log(search.test(a));
+  if (search.test(a)) {
+//     console.log(a);
+    return true;
+  }
+});
+Template.registerHelper('isSigned', function (a) {
+  var search = new RegExp("signed1", 'i');
+//     console.log(search.test(a));
+  if (search.test(a)) {
+//     console.log(a);
+    return true;
+  }
+});
+
 incrementLimit = function(inc) {
   inc=10;
   newLimit = Session.get('limit') + inc;
@@ -108,7 +125,12 @@ Template.CategoryShow.helpers({
   },
   audioOnly: function () {
     return Session.get("audioOnly");
-  }
+  },
+//   isDubbedAD: function () {
+//     //     console.log(param);
+//     var search = new RegExp(param, 'i');
+//     Programmes.find({categories: search}).count();
+//   }
 });
 
 /*****************************************************************************/

@@ -33,6 +33,12 @@
           {{#if equals is_clip 1}}
             <i class="fa fa-paperclip fa-1x"></i>
           {{/if}}
+          {{#if isDubbedAD categories}}
+          <p style="font-size:10px"><a href="/channels/{{_id}}"><span class="label label-primary">Dubbed/AD</span></a></p>
+          {{/if}}
+          {{#if isSigned categories}}
+          <p style="font-size:10px"><a href="/channels/{{_id}}"><span class="label label-primary">Signed</span></a></p>
+          {{/if}}
         </td>
 <!--         <td>{{description}}</td> -->
 <!--         <td>{{dueDateFormatted}}</td> -->

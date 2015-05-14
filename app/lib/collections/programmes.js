@@ -1,5 +1,5 @@
 Programmes = new Mongo.Collection('programmes');
-Programmes.initEasySearch(['complete_title', "media_type"], {
+Programmes.initEasySearch(['complete_title', "tags" ], {
   'limit' : 15,
   'use' : 'mongo-db'
 });
