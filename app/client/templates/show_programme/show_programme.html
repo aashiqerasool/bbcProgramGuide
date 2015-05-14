@@ -36,7 +36,8 @@ h1 {
         <th><h2>Service</h2></th>
         <th><h2>Master Brand</h2></th>
         <th><h2>Type</h2></th>
-
+        <th><h2>Other Info</h2></th>
+        
       </tr>
     </thead>
     <tbody>
@@ -53,6 +54,14 @@ h1 {
 <!--         {{#if mediaType=video}} -->
 <!--         <td><i class="fa fa-film fa-3x"></i></td> -->
 <!--         {{/if}} -->
+        <td>
+          {{#if isDubbedAD categories}}
+          <p style="font-size:15px"><a href="/channels/{{_id}}"><span class="label label-primary">Dubbed/AD</span></a></p>
+          {{/if}}
+          {{#if isSigned categories}}
+          <p style="font-size:15px"><a href="/channels/{{_id}}"><span class="label label-primary">Signed</span></a></p>
+          {{/if}}          
+        </td>
       </tr>
     </tbody>
   </table>
